@@ -1,0 +1,69 @@
+﻿@page
+@model RazorPagesMedicalCenter.Pages.Patients.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Patient</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Patient.PatientFName" class="control-label"></label>
+                <input asp-for="Patient.PatientFName" class="form-control" />
+                <span asp-validation-for="Patient.PatientFName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.PatientLName" class="control-label"></label>
+                <input asp-for="Patient.PatientLName" class="form-control" />
+                <span asp-validation-for="Patient.PatientLName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.PatientDateOfBirth" class="control-label"></label>
+                <input asp-for="Patient.PatientDateOfBirth" class="form-control" />
+                <span asp-validation-for="Patient.PatientDateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.PatientZIP" class="control-label"></label>
+                <input asp-for="Patient.PatientZIP" class="form-control" />
+                <span asp-validation-for="Patient.PatientZIP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.PatientStreet" class="control-label"></label>
+                <input asp-for="Patient.PatientStreet" class="form-control" />
+                <span asp-validation-for="Patient.PatientStreet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.PatientCity" class="control-label"></label>
+                <input asp-for="Patient.PatientCity" class="form-control" />
+                <span asp-validation-for="Patient.PatientCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.PatientPhoneNum" class="control-label"></label>
+                <input asp-for="Patient.PatientPhoneNum" class="form-control" />
+                <span asp-validation-for="Patient.PatientPhoneNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.PatientEmail" class="control-label"></label>
+                <input asp-for="Patient.PatientEmail" class="form-control" />
+                <span asp-validation-for="Patient.PatientEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

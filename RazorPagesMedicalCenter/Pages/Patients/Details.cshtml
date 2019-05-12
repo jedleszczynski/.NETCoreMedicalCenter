@@ -1,0 +1,67 @@
+﻿@page "{id:int?}"
+@model RazorPagesMedicalCenter.Pages.Patients.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.PatientFName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient.PatientFName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.PatientLName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient.PatientLName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.PatientDateOfBirth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient.PatientDateOfBirth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.PatientZIP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient.PatientZIP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.PatientStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient.PatientStreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.PatientCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient.PatientCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.PatientPhoneNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient.PatientPhoneNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.PatientEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient.PatientEmail)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Patient.PatientID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
