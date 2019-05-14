@@ -12,7 +12,7 @@ namespace RazorPagesMedicalCenter.Pages
 
         public void OnGet()
         {
-            Message = "Your contact page.";
+            Message = "Reach out to Jed if you need technical assistance!";
         }
     }
 }
