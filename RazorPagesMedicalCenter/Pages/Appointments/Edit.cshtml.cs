@@ -38,7 +38,7 @@ namespace RazorPagesMedicalCenter.Pages.Appointments
                 return NotFound();
             }
            ViewData["PatientID"] = new SelectList(_context.Patient, "PatientID", "PatientID");
-           ViewData["ReferralID"] = new SelectList(_context.Set<Referral>(), "ReferralID", "ReferralID");
+           ViewData["ReferralID"] = new SelectList(_context.Referral, "ReferralID", "ReferralID");
             return Page();
         }
 

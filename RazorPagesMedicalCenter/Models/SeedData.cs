@@ -21,6 +21,7 @@ namespace RazorPagesMedicalCenter.Models
                     return;   // DB has been seeded
                 }
 
+
                 context.Patient.AddRange(
                     new Patient
                     {
