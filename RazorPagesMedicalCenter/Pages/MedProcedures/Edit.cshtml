@@ -1,0 +1,45 @@
+﻿@page
+@model RazorPagesMedicalCenter.Pages.MedProcedures.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>MedProcedure</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MedProcedure.MedProcedureID" />
+            <div class="form-group">
+                <label asp-for="MedProcedure.MedProcedureType" class="control-label"></label>
+                <input asp-for="MedProcedure.MedProcedureType" class="form-control" />
+                <span asp-validation-for="MedProcedure.MedProcedureType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MedProcedure.MedProcedureName" class="control-label"></label>
+                <input asp-for="MedProcedure.MedProcedureName" class="form-control" />
+                <span asp-validation-for="MedProcedure.MedProcedureName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MedProcedure.PhysicianID" class="control-label"></label>
+                <select asp-for="MedProcedure.PhysicianID" class="form-control" asp-items="ViewBag.PhysicianID"></select>
+                <span asp-validation-for="MedProcedure.PhysicianID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

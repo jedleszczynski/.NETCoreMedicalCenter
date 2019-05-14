@@ -21,5 +21,7 @@ namespace RazorPagesMedicalCenter.Models
         public DbSet<RazorPagesMedicalCenter.Models.Physician> Physician { get; set; }
 
         public DbSet<RazorPagesMedicalCenter.Models.Referral> Referral { get; set; }
+
+        public DbSet<RazorPagesMedicalCenter.Models.MedProcedure> MedProcedure { get; set; }
     }
 }
