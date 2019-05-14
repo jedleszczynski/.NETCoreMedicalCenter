@@ -1,4 +1,4 @@
-﻿@page "{id:int}"
+﻿@page
 @model RazorPagesMedicalCenter.Pages.Patients.DeleteModel
 
 @{
@@ -25,10 +25,10 @@
             @Html.DisplayFor(model => model.Patient.PatientLName)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Patient.PatientDateOfBirth)
+            @Html.DisplayNameFor(model => model.Patient.PatientIsClinical)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Patient.PatientDateOfBirth)
+            @Html.DisplayFor(model => model.Patient.PatientIsClinical)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Patient.PatientZIP)
@@ -60,8 +60,14 @@
         <dd>
             @Html.DisplayFor(model => model.Patient.PatientEmail)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.PatientDateOfBirth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient.PatientDateOfBirth)
+        </dd>
     </dl>
-
+    
     <form method="post">
         <input type="hidden" asp-for="Patient.PatientID" />
         <input type="submit" value="Delete" class="btn btn-default" /> |

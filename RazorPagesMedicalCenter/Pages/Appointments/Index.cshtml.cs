@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesMedicalCenter.Models;
 
-namespace RazorPagesMedicalCenter.Pages.Patients
+namespace RazorPagesMedicalCenter.Pages.Appointments
 {
     public class IndexModel : PageModel
     {
@@ -18,11 +18,13 @@ namespace RazorPagesMedicalCenter.Pages.Patients
             _context = context;
         }
 
-        public IList<Patient> Patient { get;set; }
+        public IList<Appointment> Appointment { get;set; }
 
         public async Task OnGetAsync()
         {
-            Patient = await _context.Patient.ToListAsync();
+            Appointment = await _context.Appointment
+                .Include(a => a.Patient)
+                .Include(a => a.Referral).ToListAsync();
         }
     }
 }

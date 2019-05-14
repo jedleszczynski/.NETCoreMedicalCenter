@@ -1,4 +1,4 @@
-﻿@page 
+﻿@page
 @model RazorPagesMedicalCenter.Pages.Patients.IndexModel
 
 @{
@@ -10,17 +10,6 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
-
-<form>
-    <p>
-        Last Name :<input type="text" asp-for="SearchString" />
-
-        <select asp-for="PatientCity" asp-items="Model.Cities">
-            <option value="">All Cities</option>
-        </select>
-        <input type="submit" value="Filtruj" />
-    </p>
-</form>
 <table class="table">
     <thead>
         <tr>
@@ -31,7 +20,7 @@
                 @Html.DisplayNameFor(model => model.Patient[0].PatientLName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Patient[0].PatientDateOfBirth)
+                @Html.DisplayNameFor(model => model.Patient[0].PatientIsClinical)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Patient[0].PatientZIP)
@@ -48,12 +37,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.Patient[0].PatientEmail)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient[0].PatientDateOfBirth)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Patient)
-        {
+@foreach (var item in Model.Patient) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.PatientFName)
@@ -62,7 +53,7 @@
                 @Html.DisplayFor(modelItem => item.PatientLName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PatientDateOfBirth)
+                @Html.DisplayFor(modelItem => item.PatientIsClinical)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PatientZIP)
@@ -80,11 +71,14 @@
                 @Html.DisplayFor(modelItem => item.PatientEmail)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.PatientDateOfBirth)
+            </td>
+            <td>
                 <a asp-page="./Edit" asp-route-id="@item.PatientID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.PatientID">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.PatientID">Delete</a>
             </td>
         </tr>
-        }
+}
     </tbody>
 </table>

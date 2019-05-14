@@ -7,6 +7,7 @@ namespace RazorPagesMedicalCenter.Models
 {
     public class Referral
     {
+        public int ReferralID { get; set; }
         public string Origin { get; set; }
     }
 }

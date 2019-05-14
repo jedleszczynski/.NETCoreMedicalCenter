@@ -10,6 +10,7 @@ namespace RazorPagesMedicalCenter.Models
         public int PhysicianID { get; set; }
         public string PhysicianFName { get; set; }
         public string PhysicianLName { get; set; }
+        public ICollection<MedProcedure> MedProcedures { get; set; }
 
     }
 }

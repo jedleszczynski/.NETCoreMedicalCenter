@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using RazorPagesMedicalCenter.Models;
 
 namespace RazorPagesMedicalCenter.Models
 {
@@ -14,5 +15,11 @@ namespace RazorPagesMedicalCenter.Models
         }
 
         public DbSet<RazorPagesMedicalCenter.Models.Patient> Patient { get; set; }
+
+        public DbSet<RazorPagesMedicalCenter.Models.Appointment> Appointment { get; set; }
+
+        public DbSet<RazorPagesMedicalCenter.Models.Physician> Physician { get; set; }
+
+        public DbSet<RazorPagesMedicalCenter.Models.Referral> Referral { get; set; }
     }
 }

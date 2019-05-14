@@ -28,6 +28,8 @@ namespace RazorPagesMedicalCenter.Models
 
                         PatientLName = "Popovic",
 
+                        PatientIsClinical = false,
+
                         PatientDateOfBirth = DateTime.Parse("1996-7-26"),
 
                         PatientZIP = "26235",
@@ -46,6 +48,8 @@ namespace RazorPagesMedicalCenter.Models
                         PatientFName = "Peter",
 
                         PatientLName = "Petrol",
+
+                        PatientIsClinical = false,
 
                         PatientDateOfBirth = DateTime.Parse("1996-7-26"),
 
@@ -66,6 +70,8 @@ namespace RazorPagesMedicalCenter.Models
 
                         PatientLName = "Kowalski",
 
+                        PatientIsClinical = false,
+
                         PatientDateOfBirth = DateTime.Parse("1986-7-26"),
 
                         PatientZIP = "26235",
@@ -84,6 +90,8 @@ namespace RazorPagesMedicalCenter.Models
                         PatientFName = "Mike",
 
                         PatientLName = "Jones",
+
+                        PatientIsClinical = true,
 
                         PatientDateOfBirth = DateTime.Parse("1932-2-11"),
 

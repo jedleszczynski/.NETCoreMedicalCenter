@@ -1,4 +1,4 @@
-﻿@page "{id:int}"
+﻿@page
 @model RazorPagesMedicalCenter.Pages.Patients.EditModel
 
 @{
@@ -25,9 +25,11 @@
                 <span asp-validation-for="Patient.PatientLName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Patient.PatientDateOfBirth" class="control-label"></label>
-                <input asp-for="Patient.PatientDateOfBirth" class="form-control" />
-                <span asp-validation-for="Patient.PatientDateOfBirth" class="text-danger"></span>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Patient.PatientIsClinical" /> @Html.DisplayNameFor(model => model.Patient.PatientIsClinical) @*changeed PatientIsClinical to Patient.PatientIsClinical*@
+                    </label>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="Patient.PatientZIP" class="control-label"></label>
@@ -53,6 +55,11 @@
                 <label asp-for="Patient.PatientEmail" class="control-label"></label>
                 <input asp-for="Patient.PatientEmail" class="form-control" />
                 <span asp-validation-for="Patient.PatientEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Patient.PatientDateOfBirth" class="control-label"></label>
+                <input asp-for="Patient.PatientDateOfBirth" class="form-control" />
+                <span asp-validation-for="Patient.PatientDateOfBirth" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />

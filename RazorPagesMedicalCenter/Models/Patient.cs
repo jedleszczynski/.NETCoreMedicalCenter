@@ -14,13 +14,14 @@ namespace RazorPagesMedicalCenter.Models
 
         public string PatientLName { get; set; }
 
-        //public bool PatientIsClinical { get; set; }//  does this patient have histry in clinical research
+        public bool PatientIsClinical { get; set; }
 
         public string PatientZIP { get; set; }
 
         public string PatientStreet { get; set; }
 
         public string PatientCity { get; set; }
+        public ICollection<Appointment> Appointments { get; set; }
 
         public string PatientPhoneNum { get; set; }
 

@@ -1,4 +1,4 @@
-﻿@page "{id:int?}"
+﻿@page
 @model RazorPagesMedicalCenter.Pages.Patients.DetailsModel
 
 @{
@@ -24,10 +24,10 @@
             @Html.DisplayFor(model => model.Patient.PatientLName)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Patient.PatientDateOfBirth)
+            @Html.DisplayNameFor(model => model.Patient.PatientIsClinical)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Patient.PatientDateOfBirth)
+            @Html.DisplayFor(model => model.Patient.PatientIsClinical)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Patient.PatientZIP)
@@ -58,6 +58,12 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Patient.PatientEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient.PatientDateOfBirth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patient.PatientDateOfBirth)
         </dd>
     </dl>
 </div>
