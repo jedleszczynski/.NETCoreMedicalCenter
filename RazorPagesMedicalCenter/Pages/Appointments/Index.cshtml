@@ -32,13 +32,13 @@
 @foreach (var item in Model.Appointment) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Patient.PatientID)
+                @Html.DisplayFor(modelItem => item.Patient.PatientLName) @*changed to patient last name*@
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Referral.ReferralID)
+                @Html.DisplayFor(modelItem => item.Referral.Origin) @*changed to referral origin*@
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MedProcedureID)
+                @Html.DisplayFor(modelItem => item.MedProcedureID) @*Change to med procedure name? Use details to show the whole list*@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AppointmentPrice)
