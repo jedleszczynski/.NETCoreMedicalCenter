@@ -12,7 +12,7 @@ namespace RazorPagesMedicalCenter.Pages
 
         public void OnGet()
         {
-            Message = "Reach out to Jed if you need technical assistance!";
+            Message = "This app was created by Jedrzej Leszczynski";
         }
     }
 }
